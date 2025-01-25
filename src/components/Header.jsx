@@ -3,7 +3,7 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <div className='header' >
+    <div className='header' style={{ backgroundImage: 'url(/wp5203548.jpg)' }}>
         <div className='left h-1/2 w-1/2 flex flex-col justify-center items-center'>
           <h1 className='text-4xl text-white-200 bold'>Welocome to the Anime World!</h1>
           <h3 className='text-xl mt-2 m-2 heading-2 w-[80%] '>Here you can watch free animes with good quility and all the latest released animes and anime movies.</h3>
