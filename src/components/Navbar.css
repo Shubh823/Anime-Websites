@@ -1,0 +1,131 @@
+.main{
+    margin:0px;
+    padding: 10px;
+    width: 100vw;
+    background-color: #1a1919;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 4px; 
+    opacity: 0.9;
+}
+.front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-size: 1.5rem;
+}
+.search input{
+    outline: none;
+    padding: 2px 6px 2px 6px;
+    background-color: #000000;
+    color: antiquewhite;
+    border-radius: 6px;
+    border: none;
+}
+.search input:hover{
+    cursor: pointer;
+    background-color:  #373838;
+}
+.logo{
+    font-size: 2rem;
+    margin-left: 2px;
+    color: antiquewhite;
+}
+.logo:hover{
+    cursor: pointer;
+    color: #859cab;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+    padding: 4px;
+    gap:2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+nav ul li:hover{
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.search-logo{
+    margin-right: 10px;
+    color: antiquewhite;
+}
+
+
+.three{
+     margin: 20px;
+     color: antiquewhite;
+     font-size: 1.5rem;
+     display: none;
+     cursor: pointer;
+}
+
+.menubar{
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #636262;
+            border-radius: 10px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 5;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            
+}
+.menubar ul{
+    display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+}
+.index li {
+    cursor: pointer;
+    
+}
+.index li:hover{
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px #82dfcb;
+}
+
+@media  screen and (max-width: 768px){
+    .front{
+        gap: 2rem;
+        font-size: 1rem;
+    }
+    .search input{
+        padding: 2px 4px 2px 4px;
+    }
+    .logo{
+        font-size: 1.5rem;
+    }
+    nav ul{
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+    .login,.signin{
+        padding: 2px 2px 2px 2px ;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .index{
+        display: none;
+    }
+    .three{
+        display: block;
+    }
+
+    
+}

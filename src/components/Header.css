@@ -1,0 +1,146 @@
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1; /* Keeps the overlay on top of the background image */
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("\wp5203548.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.left{
+            z-index: 3; /* Keeps content above the overlay */
+            font-weight: bolder;
+            color:#68aea2d9;
+            text-align: center;
+            font-size: 2rem;
+            transition: text-shadow 0.1s, font-size 0.1s, font-weight 0.1s;
+}
+.left:hover {
+    color: white; /* Base text color */
+    text-shadow: 
+        0 0 5px #1e614c, /* Inner glow */
+        0 0 10px #1e614c, /* Medium glow */
+        0 0 20px #1e614c, /* Outer glow */
+        0 0 40px #1e614c, 
+        0 0 80px #1e614c; /* Strong outer glow */
+    font-size: 2rem; /* Adjust the font size as needed */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+.right{
+    width:50%;
+}
+
+.right-section{
+    z-index: 3;
+    height: calc(100vh - 100px);
+    background-color: #151515;
+    width: 60%;
+    border: 3px solid #d3e1dfd9;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    background-color: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 10%;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.container{
+    height: 85%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow-y: scroll;
+}
+
+.box{
+    margin: 20px;
+   height: 15%;
+   border-radius: 10px;
+   background-color: rgb(74, 73, 72);
+   display: flex;
+   align-items: center;
+}
+
+.anime-image{
+   height:100%;
+   border-radius: 10px;
+   width:20%;
+}
+.anime-image img{
+    height: 100%;
+    width: 100%;
+    
+    border-radius: 10px;
+}
+
+.content{
+    width:80%;
+    height: 100%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+
+    color:rgb(170, 218, 14);
+}
+
+.content h1{
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px ) {
+       .right-section{
+           width: 100%;
+       }
+    
+    
+}
+
+@media screen and (max-width: 600px) {
+    .right{
+        width: 100%;
+        margin: 20px;
+    }
+    .right-section{
+        width: 100%;
+    }
+    .left{
+        display: none;
+    }
+    .container{
+        height: 80%;
+    }
+    .box{
+        height: 20%;
+    }
+    .anime-image{
+        width: 30%;
+    }
+    .content h1{
+        font-size: 1rem;
+    }
+}
