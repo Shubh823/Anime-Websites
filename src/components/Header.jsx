@@ -1,5 +1,7 @@
 import React from 'react'
 import './Header.css'
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   return (
@@ -8,7 +10,7 @@ const Header = () => {
           <h1 className='text-4xl text-white-200 bold'>Welocome to the Anime World!</h1>
           <h3 className='text-xl mt-2 m-2 heading-2 w-[80%] '>Here you can watch free animes with good quility and all the latest released animes and anime movies.</h3>
         </div>
-        <div className='right md:w-full w-1/2 flex flex-col justify-center items-center my-2 '>
+        <div className='right md:w-full w-1/2 flex flex-col justify-center items-center my-2  '>
           <div className='right-section  bg-gray-900 '>
                <div className='title'> Trending Animes Shows</div>
                
@@ -18,7 +20,7 @@ const Header = () => {
                       <img src="\blackclover.jpg" alt="image" />
                     </div>
                      <div className='content'><h2>Black Clover</h2> 
-                        <a href="https://9animetv.to/watch/black-clover-2404?ep=27377"><button>Watch Now</button></a>
+                        <Link to="https://9animetv.to/watch/black-clover-2404?ep=27377"><button>Watch Now</button></Link>
                      </div>
                </div>
 

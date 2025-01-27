@@ -126,6 +126,10 @@ nav ul li:hover{
     .three{
         display: block;
     }
+    .search{
+        display: flex;
+        align-items: center;
+    }
 
     
 }

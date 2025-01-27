@@ -5,6 +5,8 @@ import { faPiedPiperAlt } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import SignInPopup from './Signin';
 import LoginPopup from './Login';
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function Navbar({ setSearch }) {
   const [style, setStyle] = useState('hidden'); // For mobile menu visibility
@@ -33,6 +35,7 @@ function Navbar({ setSearch }) {
 
   const handleLogout = () => {
     localStorage.removeItem('loggedIn');
+    toast.success('Logged out successfully!');
     setLoggedIn(false); // Set loggedIn to false
   };
 
@@ -45,7 +48,7 @@ function Navbar({ setSearch }) {
             <FontAwesomeIcon className="logo" icon={faPiedPiperAlt} />
           </div>
           {/* Search Bar */}
-          <div className="search">
+          <div className="search" >
             <FontAwesomeIcon icon={faMagnifyingGlass} className="search-logo" />
             <input
               type="search"
@@ -59,10 +62,10 @@ function Navbar({ setSearch }) {
         {/* Navigation Links */}
         <ul className="index flex gap-6">
           <li>
-            <a href="#">Home</a>
+          <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">Latest</a>
+          <Link to="/">Latest</Link>
           </li>
           {loggedIn ? (
             <li>
@@ -108,7 +111,7 @@ function Navbar({ setSearch }) {
       <div className={`menubar md:flex-none ${style}`}>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           {loggedIn ? (
             <li>
@@ -139,6 +142,7 @@ function Navbar({ setSearch }) {
         showPopup={showLoginPopup}
         setShowPopup={setShowLoginPopup}
         users={users}
+        setUsers={setUsers}
         setLoggedIn={setLoggedIn} // Pass setLoggedIn to update login status
       />
     </div>

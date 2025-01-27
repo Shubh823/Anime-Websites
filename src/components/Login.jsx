@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import { toast } from 'react-toastify';
 
-const LoginPopup = ({ showPopup, setShowPopup, users, setIsLoggedIn, setLoggedInUser }) => {
+const LoginPopup = ({ showPopup, setShowPopup, users, setLoggedIn, setUsers}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -24,17 +25,18 @@ const LoginPopup = ({ showPopup, setShowPopup, users, setIsLoggedIn, setLoggedIn
 
     if (user) {
       setError('');
-      alert('Login successful!');
+      toast.success('Login successful!');
       
       // Save the logged-in user to localStorage
       localStorage.setItem('loggedInUser', JSON.stringify(user));
 
       // Update state in Navbar
-      setLoggedInUser(user);
-      setIsLoggedIn(true);
+      setUsers(user);
+      setLoggedIn(true);
       setShowPopup(false); // Close popup
     } else {
       setError('Invalid username or password.');
+      toast.error('Invalid username or password.');
     }
   };
 
