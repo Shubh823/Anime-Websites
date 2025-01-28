@@ -37,23 +37,23 @@ export default function AnimeCarousel() {
   }, []);
 
   return (
-    <div className="relative w-full h-[70vh] overflow-hidden">
+    <div className="relative w-full md:h-[70vh] bg-gray-900 overflow-hidden animate">
       {/* Carousel Container */}
-      <div className="w-full h-full flex transition-transform duration-700 " style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+      <div className="w-full h-1/2 md:h-full flex transition-transform duration-700 " style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {animeList.map((anime) => (
           <div
             key={anime.id}
             className="flex-shrink-0 w-full h-full flex flex-col items-center justify-center bg-gray-900 text-white"
             style={{ minWidth: "100%" }}
           >
-            <img src={anime.image} alt={anime.description} className="m-3 w-full h-[80%] object-cover opacity-50" />
+            <img src={anime.image} alt={anime.description} className="m-3 w-full h-[80%] object-scale-down md:object-cover  opacity-50" />
             <p className="mt-4 text-lg">{anime.description}</p>
           </div>
         ))}
       </div>
 
       {/* Dots Navigation */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 mt-4">
+      <div className="absolute  bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 mt-4">
         {animeList.map((_, index) => (
           <button
             key={index}

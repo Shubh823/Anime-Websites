@@ -120,15 +120,26 @@ nav ul li:hover{
 }
 
 @media screen and (max-width: 500px){
+    .search-logo{
+        margin-right: 4px;
+    }
+    
+    .search-input{
+        width:160px;
+    }
     .index{
         display: none;
     }
     .three{
         display: block;
+        margin: 10px;
     }
     .search{
         display: flex;
         align-items: center;
+    }
+    .main{
+        padding: 2px;
     }
 
     

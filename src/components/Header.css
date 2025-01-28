@@ -18,6 +18,7 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
+    padding: 20px;
 }
 .left{
             z-index: 3; /* Keeps content above the overlay */
@@ -40,7 +41,8 @@
 }
 
 .right{
-    width:50%;
+    width:60%;
+    padding: 10px;
 }
 
 .right-section{
@@ -62,8 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50px;
-    height: 10%;
+   height: 8%;
     text-align: center;
     color: white;
     font-size: 1.5rem;
@@ -114,15 +115,17 @@
 @media (max-width: 768px ) {
        .right-section{
            width: 100%;
+           padding: 20px;
        }
     
     
 }
 
-@media screen and (max-width: 600px) {
+@media  (max-width: 600px) {
     .right{
         width: 100%;
-        margin: 20px;
+        padding: 0px;
+        margin: 10px;
     }
     .right-section{
         width: 100%;
